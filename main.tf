@@ -5,6 +5,11 @@ terraform {
   }
 }
 
+provider "azurerm" {
+  version = ">=2.0"
+  features {}
+}
+
 variable "resource_group_name" {
   default = "tailspin-space-game-rg"
   description = "The name of the resource group"
@@ -42,8 +47,8 @@ resource "azurerm_app_service_plan" "spacegame" {
   reserved            = true
 
   sku {
-    tier = "Basic"
-    size = "B1"
+    tier = "Premium V2"
+    size = "PC2"
   }
 }
 
