@@ -47,8 +47,8 @@ resource "azurerm_app_service_plan" "spacegame" {
   reserved            = true
 
   sku {
-    tier = "Premium V2"
-    size = "PC2"
+    tier = "Basic"
+    size = "B1"
   }
 }
 
